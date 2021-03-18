@@ -1,23 +1,23 @@
 ## Commands
 All commands require an admin role which you can set by using `rl!admin` (requires administrator permissions on the server). The bot will reply with missing permissions otherwise. Executing a command without any argument will prompt the bot to provide you with instructions on how to use the command effectively. In the following list the default prefix `rl!` is used, but it can be freely changed in the `config.ini` file.
 
-- `rl!help` shows this set of commands along with a link to the repository.
-- `rl!new` starts the creation process for a new reaction role message. Check [below](#example) for an example.
-- `rl!edit` edits the text and embed of an existing reaction role message.
-- `rl!reaction` adds or removes a reaction from an existing reaction role message.
-- `rl!notify` toggles sending messages to users when they get/lose a role (default off) for the current server (the command affects only the server it was used in).
-- `rl!colour` changes the colour of the embeds of new and newly edited reaction role messages.
-- `rl!activity` adds an activity for the bot to loop through and show as status.
-- `rl!rm-activity` removes an activity from the bot's list.
-- `rl!activitylist` lists the current activities used by the bot as statuses.
-- `rl!admin` adds the mentioned role or role id to the admin list, allowing members with a certain role to use the bot commands. Requires administrator permissions on the server.
-- `rl!rm-admin` removes the mentioned role or role id from the admin list, preventing members with a certain role from using the bot commands. Requires administrator permissions on the server.
-- `rl!adminlist` lists the current admins on the server the command was run in by mentioning them and the current admins from other servers by printing out the role IDs. Requires administrator permissions on the server.
-- `rl!kill` shuts down the bot.
-- `rl!systemchannel` updates the main or server system channel where the bot sends errors and update notifications.
-- `rl!restart` restarts the bot.
-- `rl!update` updates the bot and restarts it. Only works on `git clone` installations. Check the [setup](#setup) section to learn how to install with git.
-- `rl!version` reports the bot's current version and the latest available one from GitHub.
+- `ra!help` shows this set of commands along with a link to the repository.
+- `ra!new` starts the creation process for a new reaction role message. Check [below](#example) for an example.
+- `ra!edit` edits the text and embed of an existing reaction role message.
+- `ra!reaction` adds or removes a reaction from an existing reaction role message.
+- `ra!notify` toggles sending messages to users when they get/lose a role (default off) for the current server (the command affects only the server it was used in).
+- `ra!colour` changes the colour of the embeds of new and newly edited reaction role messages.
+- `ra!activity` adds an activity for the bot to loop through and show as status.
+- `ra!rm-activity` removes an activity from the bot's list.
+- `ra!activitylist` lists the current activities used by the bot as statuses.
+- `ra!admin` adds the mentioned role or role id to the admin list, allowing members with a certain role to use the bot commands. Requires administrator permissions on the server.
+- `ra!rm-admin` removes the mentioned role or role id from the admin list, preventing members with a certain role from using the bot commands. Requires administrator permissions on the server.
+- `ra!adminlist` lists the current admins on the server the command was run in by mentioning them and the current admins from other servers by printing out the role IDs. Requires administrator permissions on the server.
+- `ra!kill` shuts down the bot.
+- `ra!systemchannel` updates the main or server system channel where the bot sends errors and update notifications.
+- `ra!restart` restarts the bot.
+- `ra!update` updates the bot and restarts it. Only works on `git clone` installations. Check the [setup](#setup) section to learn how to install with git.
+- `ra!version` reports the bot's current version and the latest available one from GitHub.
 
 ### Usage Example
 In this example the prefix used is `rl!`. Once you initiate the process, be sure only to answer to the bots questions or the bot might record unwanted messages as instructions. You can still send messages to other channels, and others can send messages to the channel you initiated the process in.
