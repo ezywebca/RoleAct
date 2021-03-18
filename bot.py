@@ -259,15 +259,15 @@ async def updates():
     if new_version:
         changelog = await github.latest_changelog()
         em = discord.Embed(
-            title=f"Reaction Light v{new_version} - Changes",
+            title=f"RoleAct v{new_version} - Changes",
             description=changelog,
             colour=botcolour,
         )
         em.set_footer(text=f"{botname}", icon_url=logo)
         await system_notification(
             None,
-            f"An update is available. Download Reaction Light **v{new_version}** at"
-            f" <https://github.com/eibex/reaction-light> or simply use `{prefix}update`"
+            f"An update is available. Download RoleAct **v{new_version}** at"
+            f" <https://github.com/ezywebca/RoleAct> or simply use `{prefix}update`"
             " (only works with git installations).",
             embed=em,
         )
@@ -400,7 +400,7 @@ async def check_cleanup_queued_guilds():
 
 @bot.event
 async def on_ready():
-    print("Reaction Light ready!")
+    print("RoleAct ready!")
     await database_updates()
     maintain_presence.start()
     cleandb.start()
@@ -558,7 +558,7 @@ async def on_raw_reaction_remove(payload):
 async def new(ctx):
     if isadmin(ctx.message.author, ctx.guild.id):
         sent_initial_message = await ctx.send(
-            "Welcome to the Reaction Light creation program. Please provide the required information once requested. If you would like to abort the creation, do not respond and the program will time out."
+            "Welcome to the RoleAct creation program. Please provide the required information once requested. If you would like to abort the creation, do not respond and the program will time out."
         )
         rl_object = {}
         cancelled = False
@@ -623,7 +623,7 @@ async def new(ctx):
                         break
             except asyncio.TimeoutError:
                 await ctx.author.send(
-                    "Reaction Light creation failed, you took too long to provide the requested information."
+                    "RoleAct creation failed, you took too long to provide the requested information."
                 )
                 cancelled = True
             finally:
@@ -656,7 +656,7 @@ async def new(ctx):
                     rl_object["limit_to_one"] = 0
             except asyncio.TimeoutError:
                 await ctx.author.send(
-                    "Reaction Light creation failed, you took too long to provide the requested information."
+                    "RoleAct creation failed, you took too long to provide the requested information."
                 )
                 cancelled = True
             finally:
@@ -687,7 +687,7 @@ async def new(ctx):
                     rl_object["old_message"] = False
             except asyncio.TimeoutError:
                 await ctx.author.send(
-                    "Reaction Light creation failed, you took too long to provide the requested information."
+                    "RoleAct creation failed, you took too long to provide the requested information."
                 )
                 cancelled = True
             finally:
@@ -764,7 +764,7 @@ async def new(ctx):
                             )
                 except asyncio.TimeoutError:
                     await ctx.author.send(
-                        "Reaction Light creation failed, you took too long to provide the requested information."
+                        "RoleAct creation failed, you took too long to provide the requested information."
                     )
                     cancelled = True
                 finally:
@@ -795,7 +795,7 @@ async def new(ctx):
                             )
                 except asyncio.TimeoutError:
                     await ctx.author.send(
-                        "Reaction Light creation failed, you took too long to provide the requested information."
+                        "RoleAct creation failed, you took too long to provide the requested information."
                     )
                     cancelled = True
                 finally:
@@ -875,7 +875,7 @@ async def new(ctx):
                             )
             except asyncio.TimeoutError:
                 await ctx.author.send(
-                    "Reaction Light creation failed, you took too long to provide the requested information."
+                    "RoleAct creation failed, you took too long to provide the requested information."
                 )
                 cancelled = True
             finally:
@@ -1416,9 +1416,9 @@ async def hlp(ctx):
             " `git clone` installations running on GNU/Linux.\n"
             f"- `{prefix}version` reports the bot's current version and the latest"
             " available one from GitHub.\n\n"
-            f"{botname} is running version {__version__} of Reaction Light. You can"
-            " find more resources, submit feedback, and report bugs at: "
-            "<https://github.com/eibex/reaction-light>"
+            f"{botname} is running version {__version__} of RoleAct. You can"
+            " get help by contacting <@676195747904880690> : "
+            "<https://dislist.me/bots/roleact>"
         )
 
     else:
@@ -1502,13 +1502,13 @@ async def print_version(ctx):
         latest = await github.get_latest()
         changelog = await github.latest_changelog()
         em = discord.Embed(
-            title=f"Reaction Light v{latest} - Changes",
+            title=f"RoleAct v{latest} - Changes",
             description=changelog,
             colour=botcolour,
         )
         em.set_footer(text=f"{botname}", icon_url=logo)
         await ctx.send(
-            f"I am currently running Reaction Light **v{__version__}**. The latest"
+            f"I am currently running RoleAct **v{__version__}**. The latest"
             f" available version is **v{latest}**.",
             embed=em,
         )
